@@ -204,7 +204,7 @@ const Home = (props: HomeProps) => {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" style={{ flex: 1 }}>
-          Perky Panda Club
+          PerkyPanda Club
           </Typography>
           {!wallet.connected ? (
             <ConnectButton>Connect Wallet</ConnectButton>
