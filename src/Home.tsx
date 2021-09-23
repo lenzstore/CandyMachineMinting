@@ -235,11 +235,19 @@ const Home = (props: HomeProps) => {
           </Grid>
           <Grid container item xs={12} justifyContent="center" alignItems="center">
             <Typography variant="h6" style={{ color: "white" }}>Join Perky Panda Club by buying a panda at just 3 sol</Typography>
-          </Grid>
+          </Grid>   
+          {!wallet.connected ? (         
+            <div></div>): (
           <Grid container item xs={12} justifyContent="center" alignItems="center">
-            <Typography variant="h6" style={{ color: "white" }}>{itemsRedeemed} / {itemsAvailable}</Typography>
+          <Typography variant="h6" style={{ color: "white" }}>{itemsRedeemed} / {itemsAvailable}</Typography>
           </Grid>          
-          <Grid container item xs={12} justifyContent="center" alignItems="center">                      
+          )}
+          <Grid container item xs={12} justifyContent="center" alignItems="center">
+          {!wallet.connected ? (            
+            <ConnectButton>Connect Wallet</ConnectButton>
+          ) : 
+          (
+          <MintContainer>          
           <MintButton
             disabled={isSoldOut || isMinting || !isActive}
             onClick={onMint}
@@ -267,6 +275,8 @@ const Home = (props: HomeProps) => {
               </div>
             )}
           </MintButton>
+          </MintContainer>
+          )}
         </Grid>
       </Grid>
 
