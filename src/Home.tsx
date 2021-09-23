@@ -204,7 +204,7 @@ const Home = (props: HomeProps) => {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" style={{ flex: 1 }}>
-          Perky Panda Club
+          PerkyPanda Club
           </Typography>
           {!wallet.connected ? (
             <ConnectButton>Connect Wallet</ConnectButton>
@@ -234,10 +234,10 @@ const Home = (props: HomeProps) => {
             <Typography variant="h5" style={{ color: "white" }}>Buy A Panda</Typography>            
           </Grid>
           <Grid container item xs={12} justifyContent="center" alignItems="center">
-            <Typography variant="h6" style={{ color: "white" }}>Join Perky Panda Club by buying a panda at just 3 sol</Typography>
+            <Typography variant="h6" style={{ color: "white" }}>Join PerkyPanda Club by buying a panda at just 3 sol</Typography>
           </Grid>
           <Grid container item xs={12} justifyContent="center" alignItems="center">
-            <Typography variant="h6" style={{ color: "white" }}>{itemsRedeemed} / {itemsAvailable}</Typography>
+            <Typography variant="h6" style={{ color: "white" }}>Mint count : {itemsRedeemed} / {itemsAvailable}</Typography>
           </Grid>          
           <Grid container item xs={12} justifyContent="center" alignItems="center">                      
           <MintButton
